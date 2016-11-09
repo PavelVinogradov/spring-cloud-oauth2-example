@@ -3,12 +3,31 @@ version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 
-sourceCompatibility = 1.5
+sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
+        //Logging
+        compile 'ch.qos.logback:logback-classic:1.1.+'
+        compile 'org.slf4j:slf4j-api:1.7.+'
+        compile 'org.slf4j:jcl-over-slf4j:1.7.+'
+        
+        
+        //Standard bolier plate code generation, for installation into IDE see: https://projectlombok.org/index.html 
+        compile 'org.projectlombok:lombok:1.16.6'
+        
+        //Other stuff that is almost always needed
+        compile 'commons-lang:commons-lang:2.6'
+        
+        
+        testCompile 'junit:junit-dep:4.11'
+        testCompile 'org.mockito:mockito-core:1.9.5'
+
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.14.1'
 }

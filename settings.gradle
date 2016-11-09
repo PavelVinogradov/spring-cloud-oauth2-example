@@ -1,4 +1,8 @@
-rootProject.name = 'spring-cloud-oauth2-example'
+rootProject.name = 'do-cloud-oauth2-example'
 
-include 'OAuth2AuthServer'
-include 'OAuth2ResourceServer'
+include 
+	'OAuth2AuthServer',
+	'OAuth2ResourceServer',
+	'do-services:do-persistence',
+	'do-services:do-repository-rest',
+	'do-client'
