@@ -1,4 +1,4 @@
-package com.example.config;
+package com.trgr.discorch.oauth.resource.server.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

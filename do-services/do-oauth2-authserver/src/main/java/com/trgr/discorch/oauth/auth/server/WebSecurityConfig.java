@@ -1,4 +1,4 @@
-package com.example;
+package com.trgr.discorch.oauth.auth.server;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

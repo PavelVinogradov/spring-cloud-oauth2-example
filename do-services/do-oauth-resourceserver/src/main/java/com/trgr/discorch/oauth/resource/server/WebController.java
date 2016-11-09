@@ -1,4 +1,4 @@
-package com.example;
+package com.trgr.discorch.oauth.resource.server;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.RequestMapping;

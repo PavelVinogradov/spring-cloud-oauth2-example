@@ -1,4 +1,4 @@
-package com.example.config;
+package com.trgr.discorch.oauth.resource.server.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

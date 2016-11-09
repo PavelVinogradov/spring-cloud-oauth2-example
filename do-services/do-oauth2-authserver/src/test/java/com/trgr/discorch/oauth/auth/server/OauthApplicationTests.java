@@ -1,4 +1,4 @@
-package com.example;
+package com.trgr.discorch.oauth.auth.server;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
