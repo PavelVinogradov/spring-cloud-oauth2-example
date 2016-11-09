@@ -1,12 +1,28 @@
-group 'de.stytex.example'
+group 'com.trgr.do'
 version '1.0-SNAPSHOT'
 
+buildscript {
+	ext {
+		springBootVersion = '1.3.2.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}") 
+	}
+}
+
 apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot' 
 
 sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
-    mavenCentral()
+	mavenCentral()
 }
 
 dependencies {
