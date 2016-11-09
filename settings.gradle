@@ -1,7 +1,6 @@
 rootProject.name = 'do-cloud-oauth2-example'
 
-include 
-	'do-services:do-oauth-resourceserver',
+include 'do-services:do-oauth-resourceserver',
 	'do-services:do-oauth2-authserver',
 	'do-services:do-persistence',
 	'do-services:do-repository-rest',

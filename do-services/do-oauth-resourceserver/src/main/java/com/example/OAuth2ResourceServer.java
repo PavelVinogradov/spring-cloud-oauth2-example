@@ -1,19 +1,29 @@
 package com.example;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
-import org.springframework.security.oauth2.provider.OAuth2Authentication;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.core.env.Environment;
 
-import java.security.Principal;
-import java.util.UUID;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 @SpringBootApplication
+@Slf4j
 public class OAuth2ResourceServer {
 
-	public static void main(String[] args) {
-		SpringApplication.run(OAuth2ResourceServer.class, args);
+	public static void main( String[] args ) throws UnknownHostException {
+		SpringApplication app = new SpringApplication( OAuth2ResourceServer.class );
+		Environment env = app.run( args ).getEnvironment();
+		log.info(
+				"Access URLs:\n----------------------------------------------------------\n\t" +
+						"Local: \t\thttp://127.0.0.1:{}\n\t" +
+						"External: \thttp://{}:{}\n\t" +
+						"Profiles: \t{}\n----------------------------------------------------------",
+				env.getProperty( "server.port" ),
+				InetAddress.getLocalHost().getHostAddress(),
+				env.getProperty( "server.port" ),
+				env.getActiveProfiles()
+		);
 	}
 }
