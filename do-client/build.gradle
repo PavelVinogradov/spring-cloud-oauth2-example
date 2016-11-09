@@ -1,5 +1,5 @@
 jar {
-	baseName = 'demo'
+	baseName = 'do-client'
 	version = '0.0.1-SNAPSHOT'
 }
 
